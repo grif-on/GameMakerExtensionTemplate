@@ -8,8 +8,8 @@
   "managed": true,
   "overriddenProperties": [],
   "parent": {
-    "name": "TestGXExtension",
-    "path": "TestGXExtension.yyp",
+    "name": "TestProject",
+    "path": "TestProject.yyp",
   },
   "parentObjectId": null,
   "persistent": false,

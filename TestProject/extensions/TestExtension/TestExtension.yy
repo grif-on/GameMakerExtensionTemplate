@@ -59,8 +59,8 @@
   "optionsFile": "options.json",
   "packageId": "",
   "parent": {
-    "name": "TestGXExtension",
-    "path": "TestGXExtension.yyp",
+    "name": "TestProject",
+    "path": "TestProject.yyp",
   },
   "productId": "",
   "sourcedir": "",

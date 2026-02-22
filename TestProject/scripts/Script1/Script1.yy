@@ -5,7 +5,7 @@
   "isCompatibility": false,
   "isDnD": false,
   "parent": {
-    "name": "TestGXExtension",
-    "path": "TestGXExtension.yyp",
+    "name": "TestProject",
+    "path": "TestProject.yyp",
   },
 }
