@@ -9,6 +9,9 @@ Windows Desktop
 
 Use ExampleExtension.sln in Visual Studio
 
+OR
+
+Use CMake
 
 Mac OS X
 --------

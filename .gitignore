@@ -20,7 +20,10 @@
 *.out
 *.app
 
+# Visual Studio
 build/*
+x64/*
+.vs/*
 DerivedData/*
 ExampleExtension.xcodeproj/project.xcworkspace/xcshareddata/*
 ExampleExtension.xcodeproj/xcuserdata/*
@@ -28,5 +31,11 @@ ExampleExtension.xcodeproj/project.xcworkspace/xcuserdata/*
 WinPhone/ARM/*
 WinPhone/Debug/*
 WinPhone/Release/*
+
+# CMake
+out/*
+CMakePresets.json
+
+# Other
 *.suo
 *.sdf
