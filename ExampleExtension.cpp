@@ -1,132 +1,109 @@
 // **********************************************************************************************************************
-// 
-// Copyright (c)2014, YoYo Games Ltd. All Rights reserved.
-// 
-// File:	    	ExampleExtension.cpp
-// Created:	        23/06/2014
-// Author:    		Mike.Dailly
-// Project:		    Example GameMaker: Studio Extension
-// Description:   	Show the basics of creating an extension
 //
-//					Please also take not of the POST build event. Once added to a project, get the full name+path
-//					and make sure you copy over it every time you build - debug AND release!!
-// 
-// Date				Version		BY		Comment
+// Copyright (c)2014, YoYo Games Ltd. All Rights reserved.
+// Copyright (c)2026, Grif_on - all edits are considered public domain
+//
+// Authors:         Mike.Dailly and Grif_on
+// Project:         GameMaker Extension Template
+// Description:     Shows the basics of creating an extension.
+//
+//                  Please also take a note that you can use POST build event.
+//                  Once compiled library added to a project, get the full name+path of it and make sure
+//                  you copy over it every time you re-build library - debug AND release!
+//
+// Date             Version     BY         Comment
 // ----------------------------------------------------------------------------------------------------------------------
-// 23/06/2014		V1.0		MJD		1st verison
-// 
+// 23/06/2014       V1.0        MJD        1st verison
+// 23/02/2026       V1.1        Grif_on    Refactored and formatted
+//
 // **********************************************************************************************************************
+
 #include <stdio.h>
 #include <string.h>
 
-#if !defined( _MSC_VER)
-#define EXPORTED_FN __attribute__((visibility("default")))
+#if defined(_MSC_VER)
+  #define DLL_EXPORT __declspec(dllexport)
+  #define snprintf   sprintf_s
+  #define strdup     _strdup
 #else
-#define EXPORTED_FN __declspec(dllexport)
-#define snprintf sprintf_s
-#define strdup _strdup
+  #define DLL_EXPORT __attribute__((visibility("default")))
 #endif
 
- 
-// ensure that the symbols are undercorated in the dynamic lib
+// Ensure that the symbols are unmangled in the dynamic lib
 extern "C" {
 
-static bool g_Initialised = false;
+  static bool g_initialised = false;
 
+  /**
+   * Example on how to make "Initialise the DLL" function.
+   *
+   */
+  DLL_EXPORT void MyExtension_Init() {
+    g_initialised = true;
+  }
 
-// #############################################################################################
-/// Function:<summary>
-///             Initialsie the DLL
-///          </summary>
-// #############################################################################################
-EXPORTED_FN double MyExtension_Init( void )
-{
-	g_Initialised = true;
-	return 0.0;
-}
+  /**
+   * Example on how to make "Shutdown the DLL" function.
+   *
+   */
+  DLL_EXPORT void MyExtension_Quit() {
+    g_initialised = false;
+  }
 
-// #############################################################################################
-/// Function:<summary>
-///             Shutdown the DLL
-///          </summary>
-// #############################################################################################
-EXPORTED_FN double  MyExtension_Quit( void )
-{
-	g_Initialised = false;
-	return 0.0;
-}
+  /**
+   * Takes a double... returns this double multiplied by 100.
+   *
+   * @param value A user value.
+   *
+   * @return A value * 100.0
+   */
+  DLL_EXPORT double MyExtension_Function(double value) {
+    if (!g_initialised) return 0.0;
+    return value * 100.0;
+  }
 
-// #############################################################################################
-/// Function:<summary>
-///             An actual function, takes a double... returns a double
-///          </summary>
-///
-/// In:		 <param name="_value">A user value</param>
-/// Out:	 <returns>
-///				_value*100.0
-///			 </returns>
-// #############################################################################################
-EXPORTED_FN double MyExtension_Function( double _value )
-{
-	if( !g_Initialised ) return 0.0;
-	return _value*100.0;
-}
+  /**
+   * Takes a string and a number... return a new string that have number at the end of it.
+   * NOTE: strings are UTF8 (demo is in ASCI, all chars <128).
+   *
+   * @param text  A user heading prefix string.
+   * @param value A user number.
+   *
+   * @return Concatenation of string and number.
+   */
+  DLL_EXPORT char* MyExtension_StringReturn(const char* text, double value) {
+    if (!g_initialised) return NULL;
 
+    char s[1024];
+    snprintf(&s[0], 1023, "%s%f", text, (float)value);
+    char* p_string = strdup(s);
+    return p_string;
+  }
 
-// #############################################################################################
-/// Function:<summary>
-///             An actual function, takes a string and a double... returns a combined string
-//				NOTE: strings are UTF8 ( demo is in ASCI, All chars <128 )
-///          </summary>
-///
-/// In:		 <param name="_text">A heading prefix</param>
-/// 		 <param name="_value">A user value</param>
-/// Out:	 <returns>
-///				_value*100.0
-///			 </returns>
-// #############################################################################################
-EXPORTED_FN char*  MyExtension_StringReturn( char* _text, double _value )
-{
-	if( !g_Initialised ) return NULL;
+  /**
+   * This example takes a GML buffer pointer, adds up the data contained in it,
+   * then fills in some NEW data. Please note never go beyond the bounds
+   * of the buffer, and never free/realloc it. GML controls it's life.
+   *
+   * @param p_buffer Buffer pointer.
+   * @param size     The size of buffer in bytes.
+   *
+   * @return String holding the total of the data. Buffer data is also changed.
+   */
+  DLL_EXPORT char* MyExtension_BufferPointer(void* p_buffer, double size) {
+    if (!g_initialised) return NULL;
 
-	char s[1024];
-	snprintf(&s[0], 1023, "%s%f", _text, (float)_value);
-	char* pString = strdup(s);
-	return pString;
-}
+    unsigned char* p_char_buffer = (unsigned char*)p_buffer;
+    int i, total = 0;
+    for (i = 0; i < size; i++) {
+      total += p_char_buffer[i];            // buffer read example
+      p_char_buffer[i] = (unsigned char)i;  // buffer write example
+    }
 
-// #############################################################################################
-/// Function:<summary>
-///             This example takes a GML buffer pointer, adds up the data contained in it,
-//				then fills in some NEW data. Please note never go beyond the bounds
-//				of the buffer, and never free/realloc it. GML controls it's life
-///          </summary>
-///
-/// In:		 <param name="_pBuffer">Buffer pointer</param>
-/// 		 <param name="_size">size of buffer in bytes</param>
-/// Out:	 <returns>
-///				a string holding the total of the data.
-///				Buffer data is also changed
-///			 </returns>
-// #############################################################################################
-EXPORTED_FN  char*  MyExtension_BufferPointer( void* _pBuffer, double _size)
-{
-	if( !g_Initialised ) return NULL;
+    char s[1024];
+    snprintf(&s[0], 1023, "Total = %d", total);
+    char* pString = strdup(s);
+    return pString;
+  }
 
-	unsigned char* pBuffer = (unsigned char*)_pBuffer;
-	int i,total = 0;
-	for(i=0;i<_size;i++){
-		total+=pBuffer[i];					// buffer read example
-		pBuffer[i] = (unsigned char)i;		// buffer write example
-	}
-
-
-	char s[1024];
-	snprintf(&s[0], 1023, "Total = %d", total);
-	char* pString = strdup(s);
-	return pString;
-}
-
-
-}
-
+}  // extern "C"
