@@ -7,12 +7,12 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		7A6B4AF0197080B500BF5139 /* ExampleExtension.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 7A6B4AEF197080B500BF5139 /* ExampleExtension.cpp */; };
+		7A6B4AF0197080B500BF5139 /* exports.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 7A6B4AEF197080B500BF5139 /* exports.cpp */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		7A6B4AE81970805B00BF5139 /* libExampleExtension.dylib */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.dylib"; includeInIndex = 0; path = libExampleExtension.dylib; sourceTree = BUILT_PRODUCTS_DIR; };
-		7A6B4AEF197080B500BF5139 /* ExampleExtension.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = ExampleExtension.cpp; sourceTree = "<group>"; };
+		7A6B4AEF197080B500BF5139 /* exports.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = exports.cpp; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -29,7 +29,7 @@
 		7A6B4ADF1970805B00BF5139 = {
 			isa = PBXGroup;
 			children = (
-				7A6B4AEF197080B500BF5139 /* ExampleExtension.cpp */,
+				7A6B4AEF197080B500BF5139 /* exports.cpp */,
 				7A6B4AE91970805B00BF5139 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -103,7 +103,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				7A6B4AF0197080B500BF5139 /* ExampleExtension.cpp in Sources */,
+				7A6B4AF0197080B500BF5139 /* exports.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

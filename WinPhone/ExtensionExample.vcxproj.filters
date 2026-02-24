@@ -8,6 +8,6 @@
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="..\dllmain.cpp" />
-    <ClCompile Include="..\ExampleExtension.cpp" />
+    <ClCompile Include="..\exports.cpp" />
   </ItemGroup>
 </Project>

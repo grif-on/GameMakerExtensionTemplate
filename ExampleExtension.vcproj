@@ -197,7 +197,7 @@
 				</FileConfiguration>
 			</File>
 			<File
-				RelativePath=".\ExampleExtension.cpp"
+				RelativePath=".\exports.cpp"
 				>
 			</File>
 		</Filter>
