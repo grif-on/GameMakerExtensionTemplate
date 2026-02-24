@@ -11,7 +11,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		7A6B4AE81970805B00BF5139 /* libExampleExtension.dylib */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.dylib"; includeInIndex = 0; path = libExampleExtension.dylib; sourceTree = BUILT_PRODUCTS_DIR; };
+		7A6B4AE81970805B00BF5139 /* libGameMakerExtensionTemplate.dylib */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.dylib"; includeInIndex = 0; path = libGameMakerExtensionTemplate.dylib; sourceTree = BUILT_PRODUCTS_DIR; };
 		7A6B4AEF197080B500BF5139 /* exports.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = exports.cpp; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -37,7 +37,7 @@
 		7A6B4AE91970805B00BF5139 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				7A6B4AE81970805B00BF5139 /* libExampleExtension.dylib */,
+				7A6B4AE81970805B00BF5139 /* libGameMakerExtensionTemplate.dylib */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -55,9 +55,9 @@
 /* End PBXHeadersBuildPhase section */
 
 /* Begin PBXNativeTarget section */
-		7A6B4AE71970805B00BF5139 /* ExampleExtension */ = {
+		7A6B4AE71970805B00BF5139 /* GameMakerExtensionTemplate */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 7A6B4AEC1970805B00BF5139 /* Build configuration list for PBXNativeTarget "ExampleExtension" */;
+			buildConfigurationList = 7A6B4AEC1970805B00BF5139 /* Build configuration list for PBXNativeTarget "GameMakerExtensionTemplate" */;
 			buildPhases = (
 				7A6B4AE41970805B00BF5139 /* Sources */,
 				7A6B4AE51970805B00BF5139 /* Frameworks */,
@@ -67,9 +67,9 @@
 			);
 			dependencies = (
 			);
-			name = ExampleExtension;
-			productName = ExampleExtension;
-			productReference = 7A6B4AE81970805B00BF5139 /* libExampleExtension.dylib */;
+			name = GameMakerExtensionTemplate;
+			productName = GameMakerExtensionTemplate;
+			productReference = 7A6B4AE81970805B00BF5139 /* libGameMakerExtensionTemplate.dylib */;
 			productType = "com.apple.product-type.library.dynamic";
 		};
 /* End PBXNativeTarget section */
@@ -81,7 +81,7 @@
 				LastUpgradeCheck = 0510;
 				ORGANIZATIONNAME = "YoYo Games Ltd";
 			};
-			buildConfigurationList = 7A6B4AE31970805B00BF5139 /* Build configuration list for PBXProject "ExampleExtension" */;
+			buildConfigurationList = 7A6B4AE31970805B00BF5139 /* Build configuration list for PBXProject "GameMakerExtensionTemplate" */;
 			compatibilityVersion = "Xcode 3.2";
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
@@ -93,7 +93,7 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				7A6B4AE71970805B00BF5139 /* ExampleExtension */,
+				7A6B4AE71970805B00BF5139 /* GameMakerExtensionTemplate */,
 			);
 		};
 /* End PBXProject section */
@@ -206,7 +206,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		7A6B4AE31970805B00BF5139 /* Build configuration list for PBXProject "ExampleExtension" */ = {
+		7A6B4AE31970805B00BF5139 /* Build configuration list for PBXProject "GameMakerExtensionTemplate" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				7A6B4AEA1970805B00BF5139 /* Debug */,
@@ -215,7 +215,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		7A6B4AEC1970805B00BF5139 /* Build configuration list for PBXNativeTarget "ExampleExtension" */ = {
+		7A6B4AEC1970805B00BF5139 /* Build configuration list for PBXNativeTarget "GameMakerExtensionTemplate" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				7A6B4AED1970805B00BF5139 /* Debug */,

@@ -1,1 +1,1 @@
-gcc -sharedlib exports.cpp -o libExampleExtension_linux.so
+gcc -sharedlib exports.cpp -o libGameMakerExtensionTemplate_linux.so

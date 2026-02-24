@@ -29,7 +29,7 @@
   <PropertyGroup Label="Globals">
     <ProjectGuid>{d849a2c4-e3c2-4ab3-a79e-97736fdee90c}</ProjectGuid>
     <Keyword>DynamicLibrary</Keyword>
-    <RootNamespace>ExampleExtensionUWP</RootNamespace>
+    <RootNamespace>GameMakerExtensionTemplateUWP</RootNamespace>
     <DefaultLanguage>en-US</DefaultLanguage>
     <MinimumVisualStudioVersion>14.0</MinimumVisualStudioVersion>
     <AppContainerApplication>true</AppContainerApplication>

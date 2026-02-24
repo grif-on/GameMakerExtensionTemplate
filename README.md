@@ -19,26 +19,26 @@ cmake -B "out"
 ```
 - Everytime after C++ code changes -
 ```
-cmake --build "out" --config Release; Copy-Item "./out/Release/ExampleExtension.dll" "./TestProject/extensions/TestExtension/ExampleExtension.dll" -Force
+cmake --build "out" --config Release; Copy-Item "./out/Release/GameMakerExtensionTemplate.dll" "./TestProject/extensions/TestExtension/GameMakerExtensionTemplate.dll" -Force
 ```
 
-Note - If you want to add new .cpp files, make sure to add them in `add_library()` inside `./CMakeLists.txt` and re-run `cmake -B "out"`.
+Note - If you want to add new .cpp files, make sure to add them in `add_library()` arguments inside `./CMakeLists.txt` and re-run `cmake -B "out"`.
 
 ### Windows Desktop
 
-- Use `./ExampleExtension.sln` in Visual Studio.
+- Use `./GameMakerExtensionTemplate.sln` in Visual Studio.
 
 ### Linux
 
-- Use the `build_linux.sh` shell script.
+- Use the `./build_linux.sh` shell script.
 
 ### Mac OS X
 
-- Use ExampleExtension.xcodeproj and XCode to build.
+- Use `./GameMakerExtensionTemplate.xcodeproj/` in XCode to build.
 
 ### Other platforms
 
 - Check out:
   - `./build_emscripten.sh`
-  - `./ExampleExtension.xcodeproj`
-  - `./ExampleExtensionUWP`
+  - `./GameMakerExtensionTemplateUWP/`
+  - `./WinPhone/`

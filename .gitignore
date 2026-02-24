@@ -25,9 +25,9 @@ build/*
 x64/*
 .vs/*
 DerivedData/*
-ExampleExtension.xcodeproj/project.xcworkspace/xcshareddata/*
-ExampleExtension.xcodeproj/xcuserdata/*
-ExampleExtension.xcodeproj/project.xcworkspace/xcuserdata/*
+GameMakerExtensionTemplate.xcodeproj/project.xcworkspace/xcshareddata/*
+GameMakerExtensionTemplate.xcodeproj/xcuserdata/*
+GameMakerExtensionTemplate.xcodeproj/project.xcworkspace/xcuserdata/*
 WinPhone/ARM/*
 WinPhone/Debug/*
 WinPhone/Release/*

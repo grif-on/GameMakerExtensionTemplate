@@ -20,7 +20,7 @@
   </ItemGroup>
   <PropertyGroup Label="Globals">
     <ProjectGuid>{382130d6-07a0-4e34-879b-c0c4ae3004f8}</ProjectGuid>
-    <RootNamespace>ExtensionExample</RootNamespace>
+    <RootNamespace>GameMakerExtensionTemplate</RootNamespace>
     <DefaultLanguage>en-US</DefaultLanguage>
     <MinimumVisualStudioVersion>11.0</MinimumVisualStudioVersion>
   </PropertyGroup>

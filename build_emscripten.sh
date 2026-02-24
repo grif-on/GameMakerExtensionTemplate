@@ -1,1 +1,1 @@
-emcc exports.cpp -sSIDE_MODULE  -o libExampleExtension_emscripten.so
+emcc exports.cpp -sSIDE_MODULE  -o libGameMakerExtensionTemplate_emscripten.so
