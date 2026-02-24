@@ -39,3 +39,7 @@ CMakePresets.json
 # Other
 *.suo
 *.sdf
+
+# GameMaker temporary files
+*.old
+*.resource_order
