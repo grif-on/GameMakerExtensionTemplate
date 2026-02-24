@@ -36,6 +36,7 @@ extern "C" {
 
   /**
    * Example on how to make "Initialise the DLL" function.
+   * NOTE: in TestProject.yyp calling of this function as "init" already set up (inside extension asset).
    *
    */
   DLL_EXPORT void MyExtension_Init() {
@@ -44,6 +45,7 @@ extern "C" {
 
   /**
    * Example on how to make "Shutdown the DLL" function.
+   * NOTE: in TestProject.yyp calling of this function as "final" already set up (inside extension asset).
    *
    */
   DLL_EXPORT void MyExtension_Quit() {
