@@ -18,7 +18,7 @@
   ],
   "ResourceOrderSettings": [
     {"name":"Object1","order":18,"path":"objects/Object1/Object1.yy",},
-    {"name":"TestExtension","order":16,"path":"extensions/TestExtension/TestExtension.yy",},
+    {"name":"GameMakerExtensionTemplate","order":16,"path":"extensions/GameMakerExtensionTemplate/GameMakerExtensionTemplate.yy",},
     {"name":"Script1","order":17,"path":"scripts/Script1/Script1.yy",},
   ],
 }

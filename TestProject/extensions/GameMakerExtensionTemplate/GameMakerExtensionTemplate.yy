@@ -1,7 +1,7 @@
 {
   "resourceType": "GMExtension",
   "resourceVersion": "1.2",
-  "name": "TestExtension",
+  "name": "GameMakerExtensionTemplate",
   "androidactivityinject": "",
   "androidclassname": "",
   "androidcodeinjection": "",
