@@ -1,1 +1,2 @@
 gcc -sharedlib exports.cpp -o libGameMakerExtensionTemplate_linux.so
+# cp "./libGameMakerExtensionTemplate_linux.so" "./TestProject/extensions/GameMakerExtensionTemplate/libGameMakerExtensionTemplate_linux.so"

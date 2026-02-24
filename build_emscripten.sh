@@ -1,1 +1,2 @@
 emcc exports.cpp -sSIDE_MODULE  -o libGameMakerExtensionTemplate_emscripten.so
+# cp "./libGameMakerExtensionTemplate_emscripten.so" "./TestProject/extensions/GameMakerExtensionTemplate/libGameMakerExtensionTemplate_emscripten.so"
