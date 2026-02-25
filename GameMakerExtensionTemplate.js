@@ -1,3 +1,5 @@
+// This file is for HTML5 platform
+
 function GameMakerExtensionTemplate_init() { }
 
 function GameMakerExtensionTemplate_quit() { }
