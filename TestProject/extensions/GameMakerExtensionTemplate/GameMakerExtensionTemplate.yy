@@ -18,21 +18,21 @@
   "exportToGame": true,
   "extensionVersion": "0.0.1",
   "files": [
-    {"resourceType":"GMExtensionFile","resourceVersion":"1.0","name":"","constants":[],"copyToTargets":17179869408,"filename":"GameMakerExtensionTemplate.dll","final":"MyExtension_Quit","functions":[
-        {"resourceType":"GMExtensionFunction","resourceVersion":"1.0","name":"MyExtension_Init","argCount":0,"args":[],"documentation":"","externalName":"","help":"","hidden":false,"kind":1,"returnType":2,},
-        {"resourceType":"GMExtensionFunction","resourceVersion":"1.0","name":"MyExtension_Quit","argCount":0,"args":[],"documentation":"","externalName":"","help":"","hidden":false,"kind":1,"returnType":2,},
-        {"resourceType":"GMExtensionFunction","resourceVersion":"1.0","name":"MyExtension_Function","argCount":0,"args":[
+    {"resourceType":"GMExtensionFile","resourceVersion":"1.0","name":"","constants":[],"copyToTargets":17179869408,"filename":"GameMakerExtensionTemplate.dll","final":"GameMakerExtensionTemplate_quit","functions":[
+        {"resourceType":"GMExtensionFunction","resourceVersion":"1.0","name":"GameMakerExtensionTemplate_init","argCount":0,"args":[],"documentation":"","externalName":"","help":"","hidden":false,"kind":1,"returnType":2,},
+        {"resourceType":"GMExtensionFunction","resourceVersion":"1.0","name":"GameMakerExtensionTemplate_quit","argCount":0,"args":[],"documentation":"","externalName":"","help":"","hidden":false,"kind":1,"returnType":2,},
+        {"resourceType":"GMExtensionFunction","resourceVersion":"1.0","name":"GameMakerExtensionTemplate_multiply","argCount":0,"args":[
             2,
           ],"documentation":"","externalName":"","help":"","hidden":false,"kind":1,"returnType":2,},
-        {"resourceType":"GMExtensionFunction","resourceVersion":"1.0","name":"MyExtension_StringReturn","argCount":0,"args":[
+        {"resourceType":"GMExtensionFunction","resourceVersion":"1.0","name":"GameMakerExtensionTemplate_concatenate_string_and_number","argCount":0,"args":[
             1,
             2,
           ],"documentation":"","externalName":"","help":"","hidden":false,"kind":1,"returnType":1,},
-        {"resourceType":"GMExtensionFunction","resourceVersion":"1.0","name":"MyExtension_BufferPointer","argCount":0,"args":[
+        {"resourceType":"GMExtensionFunction","resourceVersion":"1.0","name":"GameMakerExtensionTemplate_read_and_fill_buffer","argCount":0,"args":[
             1,
             2,
           ],"documentation":"","externalName":"","help":"","hidden":false,"kind":1,"returnType":1,},
-      ],"init":"MyExtension_Init","kind":1,"order":[],"origname":"","ProxyFiles":[
+      ],"init":"GameMakerExtensionTemplate_init","kind":1,"order":[],"origname":"","ProxyFiles":[
         {"resourceType":"GMProxyFile","resourceVersion":"1.0","name":"libGameMakerExtensionTemplate_linux.so","TargetMask":7,},
         {"resourceType":"GMProxyFile","resourceVersion":"1.0","name":"GameMakerExtensionTemplate.js","TargetMask":5,},
         {"resourceType":"GMProxyFile","resourceVersion":"1.0","name":"libGameMakerExtensionTemplate_emscripten.so","TargetMask":34,},

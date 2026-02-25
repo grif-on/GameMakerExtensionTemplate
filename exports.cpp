@@ -39,7 +39,7 @@ extern "C" {
    * NOTE: in TestProject.yyp calling of this function as "init" already set up (inside extension asset).
    *
    */
-  DLL_EXPORT void MyExtension_Init() {
+  DLL_EXPORT void GameMakerExtensionTemplate_init() {
     g_initialised = true;
   }
 
@@ -48,7 +48,7 @@ extern "C" {
    * NOTE: in TestProject.yyp calling of this function as "final" already set up (inside extension asset).
    *
    */
-  DLL_EXPORT void MyExtension_Quit() {
+  DLL_EXPORT void GameMakerExtensionTemplate_quit() {
     g_initialised = false;
   }
 
@@ -59,7 +59,7 @@ extern "C" {
    *
    * @return A value * 100.0
    */
-  DLL_EXPORT double MyExtension_Function(double value) {
+  DLL_EXPORT double GameMakerExtensionTemplate_multiply(double value) {
     if (!g_initialised) return 0.0;
     return value * 100.0;
   }
@@ -73,7 +73,7 @@ extern "C" {
    *
    * @return Concatenation of string and number.
    */
-  DLL_EXPORT char* MyExtension_StringReturn(const char* text, double value) {
+  DLL_EXPORT char* GameMakerExtensionTemplate_concatenate_string_and_number(const char* text, double value) {
     if (!g_initialised) return NULL;
 
     char s[1024];
@@ -92,7 +92,7 @@ extern "C" {
    *
    * @return String holding the total of the data. Buffer data is also changed.
    */
-  DLL_EXPORT char* MyExtension_BufferPointer(void* p_buffer, double size) {
+  DLL_EXPORT char* GameMakerExtensionTemplate_read_and_fill_buffer(void* p_buffer, double size) {
     if (!g_initialised) return NULL;
 
     unsigned char* p_char_buffer = (unsigned char*)p_buffer;
