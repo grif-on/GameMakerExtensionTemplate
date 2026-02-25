@@ -18,7 +18,7 @@
   "exportToGame": true,
   "extensionVersion": "0.0.1",
   "files": [
-    {"resourceType":"GMExtensionFile","resourceVersion":"1.0","name":"","constants":[],"copyToTargets":17179869248,"filename":"GameMakerExtensionTemplate.dll","final":"MyExtension_Quit","functions":[
+    {"resourceType":"GMExtensionFile","resourceVersion":"1.0","name":"","constants":[],"copyToTargets":17179869408,"filename":"GameMakerExtensionTemplate.dll","final":"MyExtension_Quit","functions":[
         {"resourceType":"GMExtensionFunction","resourceVersion":"1.0","name":"MyExtension_Init","argCount":0,"args":[],"documentation":"","externalName":"","help":"","hidden":false,"kind":1,"returnType":2,},
         {"resourceType":"GMExtensionFunction","resourceVersion":"1.0","name":"MyExtension_Quit","argCount":0,"args":[],"documentation":"","externalName":"","help":"","hidden":false,"kind":1,"returnType":2,},
         {"resourceType":"GMExtensionFunction","resourceVersion":"1.0","name":"MyExtension_Function","argCount":0,"args":[
@@ -33,6 +33,8 @@
             2,
           ],"documentation":"","externalName":"","help":"","hidden":false,"kind":1,"returnType":1,},
       ],"init":"MyExtension_Init","kind":1,"order":[],"origname":"","ProxyFiles":[
+        {"resourceType":"GMProxyFile","resourceVersion":"1.0","name":"libGameMakerExtensionTemplate_linux.so","TargetMask":7,},
+        {"resourceType":"GMProxyFile","resourceVersion":"1.0","name":"GameMakerExtensionTemplate.js","TargetMask":5,},
         {"resourceType":"GMProxyFile","resourceVersion":"1.0","name":"libGameMakerExtensionTemplate_emscripten.so","TargetMask":34,},
       ],"uncompress":false,"usesRunnerInterface":false,},
   ],

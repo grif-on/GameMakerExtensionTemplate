@@ -36,9 +36,15 @@ Note - If you want to add new .cpp files, make sure to add them in `add_library(
 
 - Use `./GameMakerExtensionTemplate.xcodeproj/` in XCode.
 
+### HTML5
+
+- Check out `./GameMakerExtensionTemplate.js`.
+
+It have nothing to do with C++ though, it is here just as an example on how to make JS proxy file for C++ extension ¯\\\_(ツ)\_/¯
+
 ### Other platforms
 
 - Check out:
-  - `./build_emscripten.sh`
+  - `./build_emscripten.sh` (GX.games)
   - `./GameMakerExtensionTemplateUWP/`
   - `./WinPhone/`
