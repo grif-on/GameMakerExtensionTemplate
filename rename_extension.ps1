@@ -133,6 +133,6 @@ function ultimateRenamer([string] $directory, [string] $rename_target, [string] 
   
 }
 
-ultimateRenamer -directory "./" -rename_target "GameMakerExtensionTemplate" -rename_result $Name
+ultimateRenamer -directory "./" -rename_target $current_name -rename_result $Name
 
 #endregion Main script work
