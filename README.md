@@ -28,7 +28,7 @@ cmake -B "out"
 cmake --build "out" --config Release; Copy-Item "./out/Release/GameMakerExtensionTemplate.dll" "./TestProject/extensions/GameMakerExtensionTemplate/GameMakerExtensionTemplate.dll" -Force
 ```
 
-Note - If you want to add new .cpp files, make sure to add them in `add_library()` arguments inside `./CMakeLists.txt` and re-run `cmake -B "out"`.
+Note - If you want to add new .cpp files, make sure to add them in to arguments of `add_library()` inside the `./CMakeLists.txt` and re-run `cmake -B "out"`.
 
 ### Windows Desktop
 
